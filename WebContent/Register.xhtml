@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.prime.com.tr/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+</h:head>
+<h:body>
+
+	<p:panel header="User Registration">
+		<h:form>
+		    <p:messages showDetail="true"/>
+			<h:panelGrid columns="2" columnClasses="column" cellpadding="5">
+
+				<h:outputText value="Name" />
+				<p:inputText value="#{UserManageBean.user.nombre}" />
+				<h:outputText value="Last name" />
+				<p:inputText value="#{UserManageBean.user.apellidos}" />
+				<h:outputText value="mail" />
+				<p:inputText value="#{UserManageBean.user.email}" />
+				<h:outputText value="login" />
+				<p:inputText value="#{UserManageBean.user.login}" />
+				<h:outputText value="password" />
+				<p:password value="#{UserManageBean.user.password}" inline="true" />
+				<h:outputText value="Captcha" />
+				<p:captcha label="Captcha" />				
+				<p:commandButton value="Save" ajax="false"
+					action="#{UserManageBean.save}" />
+				<p:commandButton value="Cancel" ajax="false" />
+			</h:panelGrid>
+		</h:form>
+	</p:panel>
+
+
+</h:body>
+</html>
